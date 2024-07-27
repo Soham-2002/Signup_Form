@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        form,label,input,button{
+            display: block;
+            margin: 10px;
+        }
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form-container">
+        <form id="signup-form" onsubmit="return handleSubmit(event)">
+            <div>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" oninput="validateEmail()">
+                <div id="email-error" class="error"></div>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" oninput="validatePassword()">
+                <div id="password-error" class="error"></div>
+            </div>
+            <div id="success-message" class="success"></div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
